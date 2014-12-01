@@ -14,13 +14,13 @@ public class Llist {
 	public void add(Object o, int x){
 		if(x >= size)
 			x = size;
-		if(x < 0)
-			return;
-		Node n = new Node(o);
-		if(size == 0){
-			first = n;
+		if(x < 0){
 			size++;
+			return;
 		}
+		Node n = new Node(o);
+		if(size == 0)
+			first = n;
 		else{
 			Node cur = crawlTo(x);
 			Node temp = cur.next;
