@@ -17,8 +17,10 @@ public class Llist {
 		if(x < 0)
 			return;
 		Node n = new Node(o);
-		if(size == 0)
+		if(size == 0){
 			first = n;
+			size++;
+		}
 		else{
 			Node cur = crawlTo(x);
 			Node temp = cur.next;
